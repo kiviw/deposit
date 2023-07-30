@@ -139,7 +139,21 @@ function register_manual_deposit_admin_page() {
         30
     );
 }
-
+// Admin page to manage deposit requests
+function manual_deposit_admin_page() {
+    ?>
+    <div class="wrap">
+        <h1>Deposit Requests</h1>
+        <?php
+        // Add your custom code here to display and manage deposit requests
+        // You can display a table of pending requests, manually confirm deposits, and disburse KSH
+        // Update the database accordingly once you confirm and disburse KSH
+        // For this example, we'll show the pending deposit requests for the admin
+        manual_deposit_transactions_shortcode();
+        ?>
+    </div>
+    <?php
+}
 // Register shortcode to display the deposit transactions table for admin
 function manual_deposit_transactions_shortcode() {
     ob_start();
